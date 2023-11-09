@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сграда 5r</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <input type="number" id="doorInput" placeholder="Enter door number">
+    <button id="locateBtn">Locate door</button>
+    
+    <!-- Added buttons for buildings -->
+    <!-- <button onclick="window.location.href='Public/B1/b1.html'">Building 1</button>
+    <button onclick="window.location.href='Public/B2/b2.html'">Building 2</button>
+    <button onclick="window.location.href='Public/B31/b3.html'">Building 3</button>
+    <button onclick="window.location.href='Public/B4/b4.html'">Building 4</button>
+    <button onclick="window.location.href='Public/B5/b5.html'">Building 5</button>-->
+
+    <div class="map-container">
+        <!-- Assuming you have a div for each building's map; initially hidden -->
+        <div id="building1" class="map" style="background-image: url('building5.jpg');"></div>
+        <div id="building2" class="map" style="background-image: url('building233.jpg'); display:none;"></div>
+        <div id="building3" class="map" style="background-image: url('building3.jpg'); display:none;"></div>
+        <div id="building4" class="map" style="background-image: url('building4.jpg'); display:none;"></div>
+        <div id="building5" class="map" style="background-image: url('building55.jpg'); display:none;"></div>
+        <!-- The blinking dot -->
+        <div id="blinking-dot" style="display:none;"></div>
+    </div>
+</div>
+<script>
+    // Get the input field and button
+    var input = document.getElementById("doorInput");
+    var button = document.getElementById("locateBtn");
+  
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        button.click();
+      }
+    });
+  
+    // Define the function for what should happen when the button is clicked
+    button.onclick = function() {
+      // You would have your logic here to "Locate door"
+      console.log('Door number ' + input.value + ' is being located...');
+      // Add your logic here
+    };
+  </script>
+<script src="script.js"></script>
+</body>
+</html>
