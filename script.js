@@ -1,8 +1,8 @@
 // Define the coordinates for the doors in a JS object or array
 // Here is a mockup example for the first few IDs
 const doorCoordinates = {
-    1: { building: 'building1', x: 10, y: 20 },
-    2: { building: 'building1', x: 15, y: 25 },
+    1: { building: 'building1', x: 42.4, y: 89 },
+    2: { building: 'building1', x: 45.3, y: 89.5 }
     // ... Add all your coordinates here
   };
   
